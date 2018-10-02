@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def search
     @message = "Search Page"
+    @dark_theme = true
   end
 
   def results
