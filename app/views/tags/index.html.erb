@@ -1,6 +1,18 @@
-<% @tags.each do |tag| %>
-  <h3><%= tag.name %></h3>
-  <% tag.posts.each do |post| %>
-    <p><%= post.title %></p>
-  <% end %>
-<% end %>
+<table>
+  <tr>
+    <th>Tag Name</th>
+    <th>Post Title</th>
+  </tr>
+  <tbody>
+    <% @tags.each do |tag| %>
+      <tr>
+        <td><strong><%= tag.name %></strong></td>
+        <td>
+          <% tag.posts.each do |post| %>
+            <p><%= post.title %></p>
+          <% end %>
+        </td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
